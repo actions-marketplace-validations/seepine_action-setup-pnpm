@@ -72,6 +72,14 @@ runs:
         restore-keys: |
           ${{ runner.os }}-pnpm-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-
 
+    - uses: actions/cache@v3
+      name: Setup pnpm node_modules cache
+      with:
+        path: node_modules
+        key: ${{ runner.os }}-pnpm-node_modules-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-${{ steps.get-hash.outputs.hash }}
+        restore-keys: |
+          ${{ runner.os }}-pnpm-node_modules-store-cache-${{ steps.cache-rotation.outputs.YEAR_MONTH }}-
+
     # Prevent store to grow over time (not needed with yarn)
     # Note: not perfect as it prune too much in monorepos so the idea
     #       is to use cache-rotation as above. In the future this might work better.
