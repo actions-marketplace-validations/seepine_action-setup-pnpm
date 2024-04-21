@@ -1,5 +1,8 @@
 name: 'Pnpm Setup and Install'
 description: 'Setup pnpm and run pnpm install with cache enabled'
+branding:
+  icon: package
+  color: orange
 
 inputs:
   run_install:
