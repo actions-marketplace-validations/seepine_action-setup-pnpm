@@ -1,4 +1,4 @@
-# actions-setup-pnpm
+# action-setup-pnpm
 
 > Use corepack, if you want to set pnpm version, setting the packageManager field in package.json like `"packageManager":"pnpm@8.10.2"`
 
@@ -8,7 +8,7 @@ It will setup pnpm and run `pnpm install`.
 
 ```yml
 - name: Setup pnpm and Install
-  uses: seepine/actions-setup-pnpm@v1
+  uses: seepine/action-setup-pnpm@v1
 ```
 
 ## Input
