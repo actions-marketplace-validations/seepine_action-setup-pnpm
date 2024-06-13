@@ -10,9 +10,9 @@ inputs:
     required: false
     default: 'true'
   install_cmd:
-    description: "Default install cmd is <pnpm install --frozen-lockfile --prefer-offline>"
+    description: "Default install cmd is <pnpm install --frozen-lockfile --prefer-offline --shamefully-hoist>"
     required: false
-    default: 'pnpm install --frozen-lockfile --prefer-offline'
+    default: 'pnpm install --frozen-lockfile --prefer-offline --shamefully-hoist'
   enable-corepack:
     description: "Enable corepack"
     required: false
